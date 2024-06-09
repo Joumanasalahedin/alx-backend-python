@@ -2,6 +2,7 @@
 
 """Type-annotated function add"""
 
+
 def add(a: float, b: float) -> float:
     """arguments: float a and float b
     Returns sum as a float"""
