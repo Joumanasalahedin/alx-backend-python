@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
 """
-This module provides an asynchronous generator that yields random numbers
-between 0 and 10 with a delay of 1 second between each yield.
+python module to loop 10 times
 """
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """
-    Asynchronously generates random numbers between 0 and 10.
-
-    The coroutine loops 10 times, each time asynchronously waiting for 1 second,
-    then yields a random number between 0 and 10.
-
-    Yields:
-        float: A random float number between 0 and 10.
+    async_generator - function to loop 10 times
+    Arguments:
+        no arguments
+    Returns:
+        nothing
     """
-    for _ in range(10):
+    for i in range(10):
         await asyncio.sleep(1)
         yield random.uniform(0, 10)
