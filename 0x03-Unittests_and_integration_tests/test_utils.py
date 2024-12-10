@@ -54,11 +54,15 @@ class TestMemoize(unittest.TestCase):
         """Test that memoize caches the result of a method."""
 
         class TestClass:
+            """Test class"""
+
             def a_method(self):
+                """Test a_method"""
                 return 42
 
             @memoize
             def a_property(self):
+                """test a_property"""
                 return self.a_method()
 
         with patch.object(TestClass, "a_method", return_value=42) as mock_method:
